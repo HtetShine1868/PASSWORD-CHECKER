@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Strength Simulator - Friendly UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>Password Strength Simulator 🔐</h1>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="passwordInput"
+        placeholder="Type your password here..."
+        aria-label="Password input"
+        oninput="liveAnalyzePassword()"
+      />
+
+      <select id="attackerType" aria-label="Attacker type">
+        <option value="basic">💻 Basic PC</option>
+        <option value="advanced">⚡ Advanced GPU</option>
+        <option value="botnet">🌐 Botnet Network</option>
+      </select>
+
+      <button id="analyzeBtn" onclick="clickAnalyze()">Analyze</button>
+    </div>
+
+    <!-- Live analysis -->
+    <div id="liveResult" class="result-box">
+      <h3>Live Strength</h3>
+      <div id="liveStrengthBarContainer">
+        <div id="liveStrengthBar"></div>
+      </div>
+      <p id="liveStrengthText">Start typing to see strength...</p>
+    </div>
+
+    <!-- Detailed analysis -->
+    <div id="detailedResult" class="result-box hidden">
+      <h3>Detailed Analysis</h3>
+      <p id="detailedFeedback"></p>
+      <p><strong>Estimated time to crack:</strong> <span id="crackTimeText"></span></p>
+      <p><strong>Password feedback:</strong></p>
+      <ul id="weaknessList"></ul>
+    </div>
+
+  </div>
+
+  <script src="js/attackModel.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/passwordAnalyzer.js"></script>
+</body>
+</html>

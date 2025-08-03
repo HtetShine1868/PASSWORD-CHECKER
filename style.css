@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #2b5876, #4e4376);
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="text"], select {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  background-color: #00c9a7;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #00b295;
+}
+
+/* Result boxes */
+.result-box {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Strength bar styles */
+#liveStrengthBarContainer {
+  height: 15px;
+  background-color: #444;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+#liveStrengthBar {
+  height: 100%;
+  width: 0%;
+  background-color: green;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+#weaknessList {
+  margin-top: 8px;
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #f8c471;
+}
