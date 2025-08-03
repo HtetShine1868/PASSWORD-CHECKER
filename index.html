@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Strength Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Password Strength Simulator 🔐</h1>
+
+    <div class="input-group">
+      <input type="text" id="passwordInput" placeholder="Enter your password" />
+      <select id="attackerType">
+        <option value="basic">Basic PC</option>
+        <option value="advanced">Advanced GPU</option>
+        <option value="botnet">Botnet Network</option>
+      </select>
+      <button onclick="analyzePassword()">Analyze</button>
+    </div>
+
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script src="js/helpers.js"></script>
+  <script src="js/attackModel.js"></script>
+  <script src="js/passwordAnalyzer.js"></script>
+</body>
+</html>
